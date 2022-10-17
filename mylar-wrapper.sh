@@ -5,4 +5,4 @@
 # $4 newpath = path to the file after Mylar has processed it
 # $5 metadata = seriesmetadata { name, comicyear, comicid , issueid, issueyear, issue, publisher } (didn't use it but appears to be the same as you state from a casual glance).
 
-/usr/bin/python3 /app/comictagger.py -S /scripts/ComicTagger-MarkScannerPage/markScannerPage.py "$4"
+/usr/bin/python3 /app/mylar3/comictagger.py -S /scripts/ComicTagger-MarkScannerPage/markScannerPage.py "$4"

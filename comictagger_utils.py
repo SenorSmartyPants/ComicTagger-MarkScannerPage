@@ -1,9 +1,9 @@
 import sys
 
-#using hotio docker paths
+#using LSIO docker paths
 #something is weird with the path. Not finding the libs but this path is at the end of the path list
 #insert into the start of path and then script works
-sys.path.insert(0,'/app/lib')
+sys.path.insert(0,'/app/mylar3/lib/')
 
 from comictaggerlib.settings import *
 from comictaggerlib.comicarchive import *
@@ -31,7 +31,7 @@ def getFilenames():
     return filenames
 
 def getComicArchive(filename):
-    settings = ComicTaggerSettings('/config/app/.ComicTagger')
+    settings = ComicTaggerSettings('/config/.ComicTagger')
 
     if not os.path.exists(filename):
         print(filename + ": not found!", file=sys.stderr)
@@ -57,4 +57,4 @@ def writeMetadata(md, ca, style):
         print("The tag save seemed to fail!", file=sys.stderr)
         return False
     else:
-        print("Save complete.", file=sys.stderr)    
+        print("Save complete.", file=sys.stderr)
